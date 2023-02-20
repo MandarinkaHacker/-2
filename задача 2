@@ -1,0 +1,17 @@
+from tkinter import *
+from tkinter import messagebox
+window = Tk()
+window.title('задача2')
+window.geometry('450x230')
+window.resizable(False, False)
+def clicked():
+    username = username_entry.get()
+    messagebox.showinfo('Привет',"Привет " '{username}'.format(username=username))
+username_label = Label(window, text='Имя пользователя')
+username_label.pack()
+username_entry = Entry(window, bg='#fff', fg='#444')
+username_entry.pack()
+send_btn = Button(window, text='Привет', command=clicked)
+send_btn.pack()
+
+window.mainloop()
